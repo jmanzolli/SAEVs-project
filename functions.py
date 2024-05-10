@@ -237,7 +237,7 @@ def solveModel(epsilon, B, P, pi_plus, pi_minus, pi_out, alpha, E_req, gamma_max
 
     # e-constraint method
     model.constraints.add(sum(sum(model.alpha * model.tau[i,j] * model.x[k,i,j,t] for k in model.K for (i,j) in model.A) - sum(model.w[k,t] + sum(model.g_plus[k,s,t] - model.g_minus[k,s,t] for s in model.S) - sum(model.g_out[k,o,t] for o in model.O) for k in model.K) for t in model.T) <= epsilon)
-    model.constraints.add(sum(sum(model.d[i,j,t] for (i,j) in model.A) + sum(model.tau[i,j] * model.y[k,i,j,t] for k in model.K for (i,j) in model.A) for t in model.T)<=epsilon)
+    #model.constraints.add(sum(sum(model.d[i,j,t] for (i,j) in model.A) + sum(model.tau[i,j] * model.y[k,i,j,t] for k in model.K for (i,j) in model.A) for t in model.T)<=epsilon)
 
     opt = SolverFactory('gurobi')
     opt.options['timelimit'] = 30
