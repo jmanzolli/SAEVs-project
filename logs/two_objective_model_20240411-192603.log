@@ -1,0 +1,12 @@
+[2024-04-11 19:26:03,881] Name: two_objective_model
+[2024-04-11 19:26:03,881] Grid points: 10
+[2024-04-11 19:26:03,881] Nadir points: None
+[2024-04-11 19:26:03,881] Penalty weight: 0.001
+[2024-04-11 19:26:03,882] Early exit: True
+[2024-04-11 19:26:03,882] Bypass coefficient: True
+[2024-04-11 19:26:03,882] Flag array: True
+[2024-04-11 19:26:03,882] CPU Count: 8
+[2024-04-11 19:26:03,882] Redivide work: True
+[2024-04-11 19:26:03,882] Shared flag array: True
+[2024-04-11 19:26:03,882] ==============================
+[2024-04-11 19:26:03,883] Constructing payoff

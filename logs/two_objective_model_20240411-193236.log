@@ -1,0 +1,11 @@
+[2024-04-11 19:32:36,474] Name: two_objective_model
+[2024-04-11 19:32:36,475] Grid points: None
+[2024-04-11 19:32:36,475] Nadir points: None
+[2024-04-11 19:32:36,475] Penalty weight: 0.001
+[2024-04-11 19:32:36,475] Early exit: True
+[2024-04-11 19:32:36,475] Bypass coefficient: True
+[2024-04-11 19:32:36,475] Flag array: True
+[2024-04-11 19:32:36,475] CPU Count: 8
+[2024-04-11 19:32:36,475] Redivide work: True
+[2024-04-11 19:32:36,475] Shared flag array: True
+[2024-04-11 19:32:36,475] ==============================
