@@ -4,7 +4,7 @@ from pyomo.environ import *
 import pandas as pd
 import geopandas as gpd
 
-def coordinates(data='/Users/natomanzolli/Documents/PhD/Artigos/Journals/SAEVs paper/Origin_destination_matrices/CT_Centroids_with_YX.csv', plot=True, num_entries=None):
+def coordinates(data='/Users/natomanzolli/Documents/PhD/Artigos/Journals/Submitted/A Multi-Objective Optimization Approach for Resilient Mobility and Energy Systems/Origin_destination_matrices/CT_Centroids_with_YX.csv', plot=True, num_entries=None):
     df = pd.read_csv(data)
     
     # Limit the number of entries if specified
@@ -38,7 +38,7 @@ def coordinates(data='/Users/natomanzolli/Documents/PhD/Artigos/Journals/SAEVs p
     plt.show()
     return coordinates
 
-def shortest_path(file_path='/Users/natomanzolli/Documents/PhD/Artigos/Journals/SAEVs paper/Origin_destination_matrices/Shortest_Path_Matrix.csv', num_entries=None):
+def shortest_path(file_path='/Users/natomanzolli/Documents/PhD/Artigos/Journals/Submitted/A Multi-Objective Optimization Approach for Resilient Mobility and Energy Systems/Origin_destination_matrices/Shortest_Path_Matrix.csv', num_entries=None):
     # Read the CSV file into a DataFrame, specifying the separator as ';' and setting data types for index and headers
     distances = pd.read_csv(file_path, sep=';', index_col=0, dtype={'origins': str}) / 1000
     
@@ -52,7 +52,7 @@ def shortest_path(file_path='/Users/natomanzolli/Documents/PhD/Artigos/Journals/
     
     return distances_array
 
-def passenger_demand(file_path_shortest_paths='/Users/natomanzolli/Documents/PhD/Artigos/Journals/SAEVs paper/Origin_destination_matrices/Shortest_Path_Matrix.csv', hours_experiment=24, plot=True, num_entries=None):
+def passenger_demand(file_path_shortest_paths='/Users/natomanzolli/Documents/PhD/Artigos/Journals/Submitted/A Multi-Objective Optimization Approach for Resilient Mobility and Energy Systems/Origin_destination_matrices/Shortest_Path_Matrix.csv', hours_experiment=24, plot=True, num_entries=None):
     # Read the CSV file into a DataFrame, specifying the separator as ';' and setting data types for index and headers
     df_shortest_paths = pd.read_csv(file_path_shortest_paths, sep=';', index_col=0, dtype={'origins': str})
     
@@ -71,7 +71,7 @@ def passenger_demand(file_path_shortest_paths='/Users/natomanzolli/Documents/PhD
     # Example of reading passenger demand files for each hour and filling the array
     for hour in range(hours_experiment):
         # Example file path for passenger demand data for each hour
-        file_path_demand = f'/Users/natomanzolli/Documents/PhD/Artigos/Journals/SAEVs paper/Origin_destination_matrices/24_1hour_od/car_{hour}h.csv'
+        file_path_demand = f'/Users/natomanzolli/Documents/PhD/Artigos/Journals/Submitted/A Multi-Objective Optimization Approach for Resilient Mobility and Energy Systems/Origin_destination_matrices/24_1hour_od_new/car_{hour}h.csv'
 
         # Read passenger demand data for the current hour
         df_demand_hour = pd.read_csv(file_path_demand, sep=',', index_col=0, dtype={'origins': str})
