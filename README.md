@@ -6,7 +6,7 @@ This repository contains Python code for solving a vehicle routing and energy ma
 The problem addresses the allocation of SAEVs for passenger transportation in an urban area. It involves optimizing various aspects such as vehicle routing, charging/discharging strategies, and energy trading with the grid during peak demand periods or outages.
 
 #### Code Structure
-- `main.ipynb`: Contains the main code for formulating and solving the optimization model using Pyomo.
+- `main.py`: Contains the main code for formulating and solving the optimization model using Pyomo.
 - `functions.py`: Defines helper functions for generating random coordinates, creating distance matrices, and plotting nodes on a map.
 - `requirements.txt`: Lists the required Python packages for running the code.
 - `README.md`: This file provides an overview of the repository and instructions for usage.
