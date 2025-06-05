@@ -1,6 +1,16 @@
-from SAEVs_calculation import *
+from functions import *
 
-data = pd.read_excel('inputs.xlsx')
+
+coordinates = create_coordinates(plot=False, num_entries=None)
+distance_matrix = shortest_path(num_entries=None)
+passengers= passenger_demand(num_entries=None)
+
+num_nodes = len(coordinates['GeoUID'])
+num_vehicles = 100
+num_timesteps = 96
+epsilon = 0.1
+
+data = create_parameters(distance_matrix, num_vehicles, num_nodes, num_timesteps, print_values=True)
 model = solve_opt(data,pass_min=2000, mult_2=0,tee=True)
 
 # Plot the results
