@@ -4,6 +4,8 @@ __pycache__/
 
 # Ignore Jupyter notebooks checkpoints
 .ipynb_checkpoints/
+Pareto.ipynb
+SensitivityAnalysis.ipynb
 
 # Ignore OS-generated files
 .DS_Store
